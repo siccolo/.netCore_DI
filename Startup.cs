@@ -27,8 +27,6 @@ namespace WebAPI_v1
         {
             services.AddControllers();
             //
-            IConfigurationSection sec = Configuration.GetSection("UrlToCall");
-            //services.AddTransient<ApiSettings>();
             services.Configure<ApiSettings>(Configuration);
             services.AddTransient<IInfraApp, InfraApp>();
             
